@@ -39,14 +39,14 @@
 
 /* Site-wide styles */
 body{
-    height: 100dvh;
+    height: 100svh;
     background-color: var(--asparagus100);
 }
 
 /* Home Page Styles */
 .home-screen {
     width: 100vw;
-    height: 100dvh;
+    height: 100svh;
     display: grid;
     grid-template-areas: "title-bar" "sign-container";
     grid-template-rows: minmax(auto, 30%) 1fr;
