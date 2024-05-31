@@ -10,7 +10,7 @@
     <script src="masonry.pkgd.min.js"></script>
     <script src="imagesloaded.pkgd.min.js"></script>
 </head>
-<body class="has-navbar">
+<body>
     <header class="gallery-header">
         <img src="../Images/TreeBranchRightLeft.png" role="presentation" alt="">
         <h1 class="gallery-title">Gallery</h1>
@@ -95,6 +95,12 @@
                 msnry.layout();
             });
         });
-    </script>    
+    </script> 
+    <script>
+        const navbar = document.querySelector('.navigation');
+        const body = document.querySelector('.masonry-gallery');
+        var navgap = navbar.offsetHeight + 20;
+        body.style.marginBottom += navgap + 'px';
+    </script>
 </body>
 </html>

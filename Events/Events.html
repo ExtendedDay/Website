@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../Fonts/boxicons-2.1.4/css/boxicons.min.css">
 </head>
-<body class="has-navbar">
+<body>
     <footer>
         <nav class="navigation">
             <ul role="tree" class="navbar">
@@ -45,5 +45,12 @@
             </ul>
         </nav>
     </footer>
+    <!-- create a script that will get the height of the navbar element and add that as an extra margin bottom to the body -->
+    <script>
+        const navbar = document.querySelector('.navigation');
+        const body = document.querySelector('body');
+        body.style.marginBottom += navbar.offsetHeight + 'px';
+        console.log(navbar.offsetHeight)
+    </script>
 </body>
 </html>

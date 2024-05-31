@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../Fonts/boxicons-2.1.4/css/boxicons.min.css">
     <script src="dailyGenerator.js"></script>
 </head>
-<body class="has-navbar">
+<body>
     <header class="menu-header">
         <img src="../Images/TreeBranchLeftRight.png" role="presentation" alt="">
         <h1 class="menu-title">Menu</h1>
@@ -78,5 +78,11 @@
             </ul>
         </nav>
     </footer>
+    <script>
+        const navbar = document.querySelector('.navigation');
+        const body = document.querySelector('.daily-menu-parent-container');
+        var navgap = navbar.offsetHeight + 20;
+        body.style.marginBottom += navgap + 'px';
+    </script>
 </body>
 </html>
