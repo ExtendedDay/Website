@@ -75,7 +75,7 @@ body{
         >.title {
             font-family: SunnySpells;
             font-size: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
-            text-shadow: 0 2px 7px hsl(0 0 0/0.8);
+            text-shadow: 1px 2px 2.5px hsl(0 0 0);
             text-align: center;
             line-height: 90%;
             color: var(--arylideYellow100);
@@ -157,7 +157,7 @@ body{
 }
 
 .cal-ivy-logo {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     max-width: 240px;
