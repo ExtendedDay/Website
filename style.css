@@ -39,6 +39,7 @@
 
 /* Site-wide styles */
 body{
+    height: 100svh;
     background-color: var(--asparagus100);
 }
 
