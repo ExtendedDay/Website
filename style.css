@@ -60,6 +60,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: end;
+    margin-top: 1em;
     
     > .title-container{
         max-height: fit-content;
