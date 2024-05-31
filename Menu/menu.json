@@ -1,0 +1,144 @@
+{ 
+    "6": [
+        {
+            "day": 3,
+            "dayName": "Monday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 4,
+            "dayName": "Tuesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 5,
+            "dayName": "Wednesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 6,
+            "dayName": "Thursday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 7,   
+            "dayName": "Friday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 10,
+            "dayName": "Monday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 11,
+            "dayName": "Tuesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 12,
+            "dayName": "Wednesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 13,  
+            "dayName": "Thursday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 14,
+            "dayName": "Friday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 17,
+            "dayName": "Monday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 18,
+            "dayName": "Tuesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 19,
+            "dayName": "Wednesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 20,  
+            "dayName": "Thursday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 21,
+            "dayName": "Friday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 24,
+            "dayName": "Monday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 25,
+            "dayName": "Tuesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 26,
+            "dayName": "Wednesday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 27,
+            "dayName": "Thursday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        },
+        {
+            "day": 28,
+            "dayName": "Friday",
+            "snacks": ["pretzels"],
+            "morning": ["apple belly"],
+            "afternoon": ["beef & broccoli"]
+        }
+    ]
+}

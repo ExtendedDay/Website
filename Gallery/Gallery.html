@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Day Website</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../Fonts/boxicons-2.1.4/css/boxicons.min.css">
+    <script src="masonry.pkgd.min.js"></script>
+    <script src="imagesloaded.pkgd.min.js"></script>
+</head>
+<body class="has-navbar">
+    <header class="gallery-header">
+        <img src="../Images/TreeBranchRightLeft.png" role="presentation" alt="">
+        <h1 class="gallery-title">Gallery</h1>
+    </header>
+    <main>
+        <div class="gallery-intro-container">
+            <h2 class="gallery-subtitle">Welcome To our Gallery!</h2>
+            <p>We will be taking photos of your children's day throughout the summer as they go on our various trips or as they participate in various activities. Please check back often to see new pictures!
+             <!-- For allergy concerns please contact Cal Ivy <a href="http://https://calivyprep.org/contact-us/" target="_blank" rel="noopener noreferrer">here.</a> -->
+            </p>
+        </div>
+        <div class="gallery-container">
+            <div class="masonry-gallery">
+                <img src="Images/13-400x300.jpg" alt="" class="gallery-item">
+                <img src="Images/1003-300x400.jpg" alt="" class="gallery-item">
+                <img src="Images/103-400x300.jpg" alt="" class="gallery-item">
+                <img src="Images/13-400x300.jpg" alt="" class="gallery-item">
+                <img src="Images/161-300x150.jpg" alt="" class="gallery-item">
+                <img src="Images/23-300x400.jpg" alt="" class="gallery-item">
+                <img src="Images/43-300x380.jpg" alt="" class="gallery-item">
+                <img src="Images/54-300x280.jpg" alt="" class="gallery-item">
+                <img src="Images/56-400x300.jpg" alt="" class="gallery-item">
+                <img src="Images/61-300x280.jpg" alt="" class="gallery-item">
+                <img src="Images/72-300x200.jpg" alt="" class="gallery-item">
+                <img src="Images/76-300x150.jpg" alt="" class="gallery-item">
+                <img src="Images/783-300x300.jpg" alt="" class="gallery-item">
+                <img src="Images/829-300x280.jpg" alt="" class="gallery-item">
+                <img src="Images/90-300x200.jpg" alt="" class="gallery-item">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="navigation">
+            <ul role="tree" class="navbar">
+                <li role="none">
+                    <a role="treeitem" href="../index.html">
+                        <div class="nav-icon bx bxs-home"></div>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="treeitem" href="../Events/Events.html">
+                        <div class="nav-icon bx bxs-calendar"></div>
+                        <p>Events</p>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="treeitem" aria-current="page" href="Gallery.html">
+                        <div class="nav-icon bx bxs-photo-album"></div>
+                        <p>Gallery</p>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="treeitem" href="../Menu/Menu.html">
+                        <div class="nav-icon bx bxs-dish"></div>
+                        <p>Menu</p>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="treeitem" href="../Crew/Crew.html">
+                        <div class="nav-icon bx bxs-id-card"></div>
+                        <p>About</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elem = document.querySelector('.masonry-gallery');
+            var msnry = new Masonry(elem, {
+                // options
+                itemSelector: '.gallery-item',
+                columnWidth: '.gallery-item',
+                percentPosition: true,
+                gutter: 10,
+                fitWidth: true
+            });
+    
+            imagesLoaded(elem).on('progress', function(instance) {
+                // layout Masonry after each image loads
+                msnry.layout();
+            });
+        });
+    </script>    
+</body>
+</html>
