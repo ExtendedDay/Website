@@ -1,3 +1,6 @@
+/* Boogaloo font */
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
 :root {
     /* Library Colors */
     --rosyBrown100: hsl(1 24 64);
@@ -38,7 +41,7 @@
 }
 
 /* Site-wide styles */
-body{
+body {
     height: 100dvh;
     background-color: var(--asparagus100);
 }
@@ -51,15 +54,15 @@ body{
     grid-template-areas: "title-bar" "sign-container";
     grid-template-rows: minmax(auto, 30%) 1fr;
     overflow-x: clip;
-    
+
 }
 
 .title-bar {
     grid-area: title-bar;
     display: flex;
     place-self: center;
-    
-    > .title-container{
+
+    >.title-container {
         max-height: fit-content;
         min-width: 310px;
         max-width: 448px;
@@ -71,7 +74,7 @@ body{
         transform: rotate(-1.72deg);
         border-radius: 29px;
         box-shadow: 3px 2px 4px hsl(0 0 0/0.25);
-        
+
         >.title {
             font-family: SunnySpells;
             font-size: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
@@ -79,7 +82,7 @@ body{
             text-align: center;
             line-height: 90%;
             color: var(--arylideYellow100);
-        }   
+        }
     }
 }
 
@@ -96,13 +99,13 @@ body{
         height: auto;
         filter: drop-shadow(3px 2px 4px hsl(0 0 0/0.25));
     }
-    
+
     >ul {
         >li {
-        /* reset styling of li */
-        list-style: none;
-        width: 100%;
-        height: 100%;
+            /* reset styling of li */
+            list-style: none;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -138,7 +141,8 @@ body{
         transform: rotate(0.4deg);
     }
 
-    .bush1, .bush2 {
+    .bush1,
+    .bush2 {
         position: absolute;
         bottom: 0;
         height: auto;
@@ -165,6 +169,52 @@ body{
     z-index: 1;
 }
 
+.coming-soon-placer {
+    display: grid;
+    place-content: center;
+}
+
+.coming-soon-alert-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    border-radius: 10px;
+    margin-top: 3rem;
+    background-color: var(--arylideYellow100);
+
+    .coming-soon-text {
+        font-family: SunnySpells;
+        font-size: 50px;
+        color: var(--pureBlack);
+        text-shadow: 1px 2px 2.5px hsl(0 0 0);
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+/* Events Page */
+.events-header {
+    position: relative;
+    max-width: 100vw;
+    overflow: clip;
+
+    .events-title {
+        position: absolute;
+        top: 104px;
+        left: 22px;
+        font-family: CuteStitch, sans-serif;
+        font-size: 40px;
+        color: var(--pureBlack);
+        text-shadow: 0 0 2px hsla(58, 100%, 51%, 0.9);
+        text-align: center;
+    }
+
+    >img {
+        filter: drop-shadow(3px 2px 4px hsl(0 0 0/0.5));
+    }
+}
+
 /* Navbar */
 .navigation {
     position: fixed;
@@ -173,8 +223,8 @@ body{
     min-height: fit-content;
     background-color: var(--calPolyGreen100);
     width: 100%;
-    
-    > ul {
+
+    >ul {
         z-index: 10;
         display: grid;
         grid-template-rows: 1fr;
@@ -182,20 +232,20 @@ body{
         grid-template-areas: "Home Events Menu Gallery Crew";
         overflow: visible;
         margin: 0.5em 0;
-        
-        > li {
+
+        >li {
             list-style: none;
             text-align: center;
-            
-            > a {
+
+            >a {
                 text-decoration: none;
                 color: var(--arylideYellow100);
                 font-family: SunnySpells;
                 font-size: 18px;
                 letter-spacing: 1.5px;
                 text-transform: uppercase;
-                
-                > .nav-icon {
+
+                >.nav-icon {
                     font-size: 38px;
                     fill: currentColor;
                 }
@@ -204,27 +254,32 @@ body{
                     .nav-icon {
                         filter: drop-shadow(1px 1px 4px hsl(49 74 54/0.45));
                     }
+
                     >p {
                         text-shadow: 1px 1px 4px hsl(49 74 54/0.45);
                     }
                 }
             }
-            
+
             &:nth-child(1) {
                 grid-area: Home;
             }
+
             /* second button */
             &:nth-child(2) {
                 grid-area: Events;
             }
+
             /* third button */
             &:nth-child(3) {
                 grid-area: Menu;
             }
+
             /* fourth button */
             &:nth-child(4) {
                 grid-area: Gallery;
             }
+
             /* fifth button */
             &:nth-child(5) {
                 grid-area: Crew;
@@ -235,10 +290,11 @@ body{
 }
 
 /* Menu Page */
-.menu-header{
+.menu-header {
     position: relative;
     max-width: 100vw;
     overflow: clip;
+
     .menu-title {
         position: absolute;
         top: 100px;
@@ -249,6 +305,7 @@ body{
         text-shadow: 3px 2px 4px hsl(0 0 0/0.457);
         text-align: center;
     }
+
     >img {
         filter: drop-shadow(3px 2px 4px hsl(0 0 0/0.5));
     }
@@ -276,7 +333,7 @@ body{
         margin-inline: 1em;
         text-transform: uppercase;
         text-wrap: balance;
-        
+
     }
 }
 
@@ -327,7 +384,7 @@ body{
         margin-block: 0.25em;
         font-size: 16px;
         color: var(--pureBlack);
-        
+
         >ul {
             font: inherit;
             text-transform: capitalize;
@@ -342,6 +399,7 @@ body{
             font-size: 18px;
         }
     }
+
     & li {
         /* list-style: none; */
         margin-inline-start: 1.25em;
@@ -350,11 +408,12 @@ body{
 }
 
 /* Gallery Page */
-.gallery-header{
+.gallery-header {
     position: relative;
     max-width: 100vw;
     overflow: clip;
     display: grid;
+
     .gallery-title {
         position: absolute;
         top: 100px;
@@ -365,6 +424,7 @@ body{
         text-shadow: 3px 2px 4px hsl(0 0 0/0.457);
         text-align: center;
     }
+
     >img {
         margin-left: auto;
         margin-right: 0;
@@ -395,7 +455,7 @@ body{
         margin-bottom: 0.2em;
         text-transform: uppercase;
         text-wrap: balance;
-        
+
     }
 }
 
@@ -407,7 +467,8 @@ body{
 
 .masonry-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax values as needed */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Adjust minmax values as needed */
 
     .gallery-item {
         /* width: 50%; */
@@ -421,6 +482,31 @@ body{
 
     @media screen and (min-width: 600px) {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* About Page */
+.about-header {
+    position: relative;
+    max-width: 100vw;
+    overflow: clip;
+    display: grid;
+
+    .about-title {
+        position: absolute;
+        top: 100px;
+        right: 30px;
+        font-family: SunnySpells;
+        font-size: 42px;
+        color: var(--indianRed100);
+        text-shadow: 3px 2px 4px hsl(0 0 0/0.457);
+        text-align: center;
+    }
+
+    >img {
+        margin-left: auto;
+        margin-right: 0;
+        filter: drop-shadow(3px 2px 4px hsl(0 0 0/0.5));
     }
 }
 
@@ -443,4 +529,43 @@ body{
 @font-face {
     font-family: ActionIs;
     src: url(Fonts/Actionis-6Yex.ttf);
+}
+
+@font-face {
+    font-family: CuteStitch;
+    src: url(Fonts/Cute\ Stitch.otf);
+}
+
+@keyframes wobble-hor-bottom {
+
+    0%,
+    100% {
+        transform: translateX(0);
+        transform-origin: 50% 50%
+    }
+
+    10% {
+        transform: translateX(-30px) rotate(-6deg)
+    }
+
+    20% {
+        transform: translateX(15px) rotate(6deg)
+    }
+
+    30% {
+        transform: translateX(-15px) rotate(-3.6deg)
+    }
+
+    40% {
+        transform: translateX(9px) rotate(2.4deg)
+    }
+
+    50% {
+        transform: translateX(-6px) rotate(-1.2deg)
+    }
+
+    60% {
+        transform: translateX(0);
+        transform-origin: 50% 50%
+    }
 }
