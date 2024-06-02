@@ -330,9 +330,14 @@ body {
         >h3 {
             font: inherit;
             >a {
-                text-decoration: none;
-                color: currentColor;
                 display: inline-flex;
+                color: currentColor;
+                text-decoration: dashed underline;
+                text-decoration-thickness: 1px;
+
+                >.map-symbol {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -343,6 +348,10 @@ body {
         >.optional-text {
             font-size: 10px;
             display: none;
+
+            &[data-visable="true"] {
+                display: inline;
+            }
         }
     }
 }
