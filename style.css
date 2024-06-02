@@ -204,17 +204,14 @@ body {
 
     .events-title {
         position: absolute;
-        top: 104px;
-        left: 22px;
-        font-family: CuteStitch, sans-serif;
-        font-size: 40px;
-        color: var(--pureBlack);
-        text-shadow: 0 0 2px hsla(58, 100%, 51%, 0.9);
-        text-align: center;
+        left: -100000px;
+        overflow: hidden;
+        
     }
 
     >img {
         filter: drop-shadow(3px 2px 4px hsl(0 0 0/0.5));
+        width: 100%;
     }
 }
 
