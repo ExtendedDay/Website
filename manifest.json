@@ -1,0 +1,51 @@
+{
+    "name": "Extended Day Website",
+    "short_name": "Extended Day",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "hsl(108 18 49)",
+    "theme_color": "hsl(132 24 23)",
+    "icons": [
+        {
+            "src": "PWA assets/ExtendedDayIcon.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon168.png",
+            "type": "image/png",
+            "sizes": "168x168"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "PWA assets/ExtendedDayIcon48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        }
+    ]
+}
