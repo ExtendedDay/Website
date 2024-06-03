@@ -346,12 +346,12 @@ body {
         text-align: center;
 
         >.optional-text {
-            font-size: 10px;
+            font-size: 11px;
+            letter-spacing: 0.1em;
             display: none;
-
-            &[data-visable="true"] {
-                display: inline;
-            }
+        }
+        >.optional-text[data-visible="true"] {
+            display: inline;
         }
     }
 }
