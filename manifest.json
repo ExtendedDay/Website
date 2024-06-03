@@ -1,7 +1,7 @@
 {
     "name": "Extended Day Website",
     "short_name": "Extended Day",
-    "start_url": "/Website/index.html",
+    "start_url": "https://extendedday.github.io/Website/index.html",
     "display": "standalone",
     "background_color": "hsl(108 18 49)",
     "theme_color": "hsl(132 24 23)",
