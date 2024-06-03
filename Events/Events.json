@@ -1,51 +1,57 @@
 [
     {
         "date": "06/04/2024",
+        "time": "9:00am-12:00pm",
         "class": "b",
         "location": "Corvallis Park",
         "link": "https://maps.app.goo.gl/jEc7V2s5iFZLQMic7",
         "cost": "$0.00",
         "optional": "false",
-        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and  exploration."
+        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and exploration."
     },
     {
         "date": "06/05/2024",
+        "time": "9:00am-12:00pm",
         "class": "a",
         "location": "Corvallis Park",
         "link": "https://maps.app.goo.gl/jEc7V2s5iFZLQMic7",
         "cost": "$0.00",
         "optional": "false",
-        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and  exploration."
+        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and exploration."
     },
     {
         "date": "06/11/2024",
+        "time": "11:30am-4:00pm",
         "class": "b",
         "location": "Greystone Spray Park",
         "link": "https://maps.app.goo.gl/N2YtoBpHuWmvejeN9",
         "cost": "$5.00",
         "optional": "true",
-        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities. "
+        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities."
     },
     {
         "date": "06/12/2024",
+        "time": "12:00pm-3:30pm",
         "class": "a",
         "location": "Greystone Spray Park",
         "link": "https://maps.app.goo.gl/N2YtoBpHuWmvejeN9",
         "cost": "$5.00",
         "optional": "true",
-        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities. "
+        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities."
     },
     {
         "date": "06/13/2024",
+        "time": "12:45pm-3:30pm",
         "class": "a",
         "location": "Valley Children Ice Center",
         "link": "https://maps.app.goo.gl/pZeZv8dTNKsBd39D6",
-        "cost": "$0.00",
+        "cost": "$12.00",
         "optional": "false",
         "description": "Valley Children's Ice Center of Bakersfield is Kern County's premier ice skating facility, offering a fun and safe environment for your children. Remember to dress warmly and bring a helmet, long pants, a jacket, and gloves to stay comfortable on the ice."
     },
     {
         "date": "06/18/2024",
+        "time": "10:00am-1:00pm",
         "class": "b",
         "location": "Edwards Cinema",
         "link": "https://maps.app.goo.gl/FdWZG1pWSTSDwSzr6",
@@ -55,6 +61,7 @@
     },
     {
         "date": "06/19/2024",
+        "time": "10:00am-1:00pm",
         "class": "a",
         "location": "Edwards Cinema",
         "link": "https://maps.app.goo.gl/FdWZG1pWSTSDwSzr6",
@@ -64,38 +71,42 @@
     },
     {
         "date": "06/20/2024",
+        "time": "9:00am-12:00pm",
         "class": "a",
         "location": "Corvallis Park",
         "link": "https://maps.app.goo.gl/jEc7V2s5iFZLQMic7",
         "cost": "$0.00",
         "optional": "false",
-        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and  exploration."
+        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and exploration."
     },
     {
         "date": "06/25/2024",
+        "time": "11:30am-4:00pm",
         "class": "b",
         "location": "Greystone Spray Park",
         "link": "https://maps.app.goo.gl/N2YtoBpHuWmvejeN9",
         "cost": "$5.00",
         "optional": "true",
-        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities. "
+        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities."
     },
     {
         "date": "06/26/2024",
+        "time": "11:30am-4:00pm",
         "class": "a",
         "location": "Greystone Spray Park",
         "link": "https://maps.app.goo.gl/N2YtoBpHuWmvejeN9",
         "cost": "$5.00",
         "optional": "true",
-        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities. "
+        "description": "Greystone Park is an 8-acre park that features a playground, splash pad, basketball courts, picnic areas, a paved loop path, and open grass areas, making it perfect for your children's activities."
     },
     {
         "date": "06/27/2024",
+        "time": "12:30pm-3:00pm",
         "class": "a",
-        "location": "Corvallis Park",
-        "link": "https://maps.app.goo.gl/jEc7V2s5iFZLQMic7",
-        "cost": "$0.00",
+        "location": "Dewar's",
+        "link": "https://maps.app.goo.gl/tppj5Vku34md7HjT9",
+        "cost": "$5.00",
         "optional": "false",
-        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and  exploration."
+        "description": "Dewar's is a beloved spot where children in daycare can indulge in delightful treats. Famous for its delicious ice cream and handmade candies, Dewar's offers a sweet and fun experience for kids. The friendly atmosphere and tasty treats make it a perfect destination for a summer field trip."
     }
 ]

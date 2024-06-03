@@ -13,8 +13,45 @@
         <img src="../Images/TreeBranchRightLeft.png" role="presentation" alt="">
         <h1 class="about-title">Meet the Teachers</h1>
     </header>
-    <main class="coming-soon-placer">
-        <div class="coming-soon-alert-container"><p class="coming-soon-text">Coming Soon!</p></div>
+    <main>
+        <div class="staff-container">
+            <div class="staff-card">
+                <div class="staff-img-container">
+                    <img src="Ciara.webp" role="presentation" alt="">
+                </div>
+                <div class="staff-info-container">
+                    <h2 class="staff-name">Ciara Raymond</h2>
+                    <p class="staff-description">Teacher Description or bio or fun facts etc</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-img-container">
+                    <img src="Ciara.webp" role="presentation" alt="">
+                </div>
+                <div class="staff-info-container">
+                    <h2 class="staff-name">Ciara Raymond</h2>
+                    <p class="staff-description">Teacher Description or bio or fun facts etc</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-img-container">
+                    <img src="Ciara.webp" role="presentation" alt="">
+                </div>
+                <div class="staff-info-container">
+                    <h2 class="staff-name">Ciara Raymond</h2>
+                    <p class="staff-description">Teacher Description or bio or fun facts etc</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-img-container">
+                    <img src="Ciara.webp" role="presentation" alt="">
+                </div>
+                <div class="staff-info-container">
+                    <h2 class="staff-name">Ciara Raymond</h2>
+                    <p class="staff-description">Teacher Description or bio or fun facts etc</p>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <nav class="navigation">
@@ -53,9 +90,11 @@
         </nav>
     </footer>
     <script>
-        const navbar = document.querySelector('.navbar');
-        const body = document.querySelector('body');
-        body.style.marginBottom = navbar.offsetHeight + 'px';
+        const navbar = document.querySelector('.navigation');
+        const body = document.querySelector('.staff-container');
+        var navgap = navbar.offsetHeight + 20;
+
+        body.style.marginBottom += navgap + 'px';
     </script>
 </body>
 </html>

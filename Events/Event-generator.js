@@ -14,7 +14,7 @@ function generateEventList(events) {
 
         const eventDate = new Date(event.date);
         const eventMonth = eventDate.toLocaleString('default', { month: 'long' });
-        const eventDayNumber = eventDate.getDate();
+        let eventDayNumber = eventDate.getDate().toString().padStart(2, '0');
         const eventDayName = eventDate.toLocaleString('default', { weekday: 'long' });
 
         eventCard.innerHTML = `
@@ -33,6 +33,7 @@ function generateEventList(events) {
                                 <p>${event.location}</p>
                             </a>
                         </h3>
+                        <p>(${event.time})</p>
                     </div>
                     <div class="event-fee-container">
                         <p>Fee per child:</p>
