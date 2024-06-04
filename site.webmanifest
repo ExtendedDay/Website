@@ -1,10 +1,11 @@
 {
     "name": "Extended Day Website",
-    "short_name": "Extended Day",
+    "short_name": "Ext Day",
     "start_url": "https://extendedday.github.io/Website/index.html",
     "display": "standalone",
     "background_color": "hsl(108 18 49)",
     "theme_color": "hsl(132 24 23)",
+    "description": "Welcome to our website for our Extended Day class this summer! Here you will find field trip schedules, food schedules, a collection of information about our teachers, and a wonderful gallery that will fill with all the photos we take this summer. Add our shortcut to your home screen for easy access.",
     "icons": [
         {
             "src": "PWA assets/ExtendedDayIcon.svg",
@@ -46,6 +47,26 @@
             "src": "PWA assets/ExtendedDayIcon48.png",
             "type": "image/png",
             "sizes": "48x48"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "PWA assets/ExtendedDayHomeSS.png",
+            "type": "image/png",
+            "sizes": "432x935",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "PWA assets/ExtendedDayMenuSS.png",
+            "type": "image/png",
+            "sizes": "432x935",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "PWA assets/ExtendedDayFieldTripsSS.png",
+            "type": "image/png",
+            "sizes": "432x935",
+            "form_factor": "narrow"
         }
     ]
 }

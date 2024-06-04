@@ -57,6 +57,7 @@ body {
     grid-template-areas: "title-bar" "sign-container";
     grid-template-rows: minmax(auto, 30%) 1fr;
     overflow-x: clip;
+    overflow: hidden;
 
 }
 
