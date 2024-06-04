@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "hsl(108 18 49)",
     "theme_color": "hsl(132 24 23)",
-    "description": "Welcome to our website for our Extended Day class this summer! Here you will find field trip schedules, food schedules, a collection of information about our teachers, and a gallery that will fill with all the photos we take this summer. Add our shortcut to your home screen for easy access.",
+    "description": "Welcome to our website for our Extended Day class this summer! Here you will find field trip schedules, food schedules, a collection of information about our teachers, and a gallery that will fill with all the photos we take this summer.",
     "icons": [
         {
             "src": "PWA assets/ExtendedDayIcon.svg",
@@ -14,34 +14,14 @@
             "purpose": "any maskable"
         },
         {
-            "src": "PWA assets/ExtendedDayIcon.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        },
-        {
             "src": "PWA assets/ExtendedDayIcon192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "PWA assets/ExtendedDayIcon168.png",
-            "type": "image/png",
-            "sizes": "168x168"
-        },
-        {
-            "src": "PWA assets/ExtendedDayIcon144.png",
-            "type": "image/png",
-            "sizes": "144x144"
-        },
-        {
             "src": "PWA assets/ExtendedDayIcon96.png",
             "type": "image/png",
             "sizes": "96x96"
-        },
-        {
-            "src": "PWA assets/ExtendedDayIcon72.png",
-            "type": "image/png",
-            "sizes": "72x72"
         },
         {
             "src": "PWA assets/ExtendedDayIcon48.png",
