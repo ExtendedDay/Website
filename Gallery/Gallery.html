@@ -1,106 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="darkreader-lock">
-    <title>Extended Day Website</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../Fonts/boxicons-2.1.4/css/boxicons.min.css">
-    <script src="masonry.pkgd.min.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="darkreader-lock" />
+    <title>
+        Extended Day Website
+    </title>
+    <link href="../style.css" rel="stylesheet" />
+    <link href="../Fonts/boxicons-2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="imagesloaded.pkgd.min.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
 </head>
 <body>
     <header class="gallery-header">
-        <img src="../Images/TreeBranchRightLeft.png" role="presentation" alt="">
-        <h1 class="gallery-title">Gallery</h1>
+        <img alt="" role="presentation" src="../Images/TreeBranchRightLeft.png" />
+        <h1 class="gallery-title">
+            Gallery
+        </h1>
     </header>
     <main>
         <div class="gallery-intro-container">
-            <h2 class="gallery-subtitle">Welcome To our Gallery!</h2>
-            <p>We will be taking photos of your children's day throughout the summer as they go on our various trips or as they participate in various activities. Please check back often to see new pictures!
-             <!-- For allergy concerns please contact Cal Ivy <a href="http://https://calivyprep.org/contact-us/" target="_blank" rel="noopener noreferrer">here.</a> -->
+            <h2 class="gallery-subtitle">
+                Welcome To our Gallery!
+            </h2>
+            <p>
+                We will be taking photos of your children's day throughout the summer as they go on our various trips or as they participate in various activities. Please check back often to see new pictures!
+                <!-- For allergy concerns please contact Cal Ivy <a href="http://https://calivyprep.org/contact-us/" target="_blank" rel="noopener noreferrer">here.</a> -->
             </p>
         </div>
         <div class="gallery-container">
             <div class="masonry-gallery">
-                <img src="Images/13-400x300.jpg" alt="" class="gallery-item">
-                <img src="Images/1003-300x400.jpg" alt="" class="gallery-item">
-                <img src="Images/103-400x300.jpg" alt="" class="gallery-item">
-                <img src="Images/13-400x300.jpg" alt="" class="gallery-item">
-                <img src="Images/161-300x150.jpg" alt="" class="gallery-item">
-                <img src="Images/23-300x400.jpg" alt="" class="gallery-item">
-                <img src="Images/43-300x380.jpg" alt="" class="gallery-item">
-                <img src="Images/54-300x280.jpg" alt="" class="gallery-item">
-                <img src="Images/56-400x300.jpg" alt="" class="gallery-item">
-                <img src="Images/61-300x280.jpg" alt="" class="gallery-item">
-                <img src="Images/72-300x200.jpg" alt="" class="gallery-item">
-                <img src="Images/76-300x150.jpg" alt="" class="gallery-item">
-                <img src="Images/783-300x300.jpg" alt="" class="gallery-item">
-                <img src="Images/829-300x280.jpg" alt="" class="gallery-item">
-                <img src="Images/90-300x200.jpg" alt="" class="gallery-item">
+                <img alt="" class="gallery-item" src="Images/100-300x150.webp" />
+                <img alt="" class="gallery-item" src="Images/1003-300x400.webp" />
+                <img alt="" class="gallery-item" src="Images/103-400x300.webp" />
+                <img alt="" class="gallery-item" src="Images/13-400x300.webp" />
+                <img alt="" class="gallery-item" src="Images/161-300x150.webp" />
+                <img alt="" class="gallery-item" src="Images/23-300x400.webp" />
+                <img alt="" class="gallery-item" src="Images/43-300x380.webp" />
+                <img alt="" class="gallery-item" src="Images/54-300x280.webp" />
+                <img alt="" class="gallery-item" src="Images/56-400x300.webp" />
+                <img alt="" class="gallery-item" src="Images/61-300x280.webp" />
+                <img alt="" class="gallery-item" src="Images/72-300x200.webp" />
+                <img alt="" class="gallery-item" src="Images/76-300x150.webp" />
+                <img alt="" class="gallery-item" src="Images/783-300x300.webp" />
+                <img alt="" class="gallery-item" src="Images/829-300x280.webp" />
+                <img alt="" class="gallery-item" src="Images/90-300x200.webp" />
             </div>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="bx bx-left-arrow left-arrow"></div>
+            <div class="modal-content">
+                <div class="bx bx-x-circle close"></div>
+                <img id="modal-image" alt="Modal Image" />
+            </div>
+            <div class="bx bx-right-arrow right-arrow"></div>
         </div>
     </main>
     <footer>
         <nav class="navigation">
-            <ul role="tree" class="navbar">
+            <ul class="navbar" role="tree">
                 <li role="none">
-                    <a role="treeitem" href="../index.html">
-                        <div class="nav-icon bx bxs-home"></div>
-                        <p>Home</p>
+                    <a href="../index.html" role="treeitem">
+                        <div class="nav-icon bx bxs-home">
+                        </div>
+                        <p>
+                            Home
+                        </p>
                     </a>
                 </li>
                 <li role="none">
-                    <a role="treeitem" href="../Events/Events.html">
-                        <div class="nav-icon bx bxs-calendar"></div>
-                        <p>Trips</p>
+                    <a href="../Events/Events.html" role="treeitem">
+                        <div class="nav-icon bx bxs-calendar">
+                        </div>
+                        <p>
+                            Trips
+                        </p>
                     </a>
                 </li>
                 <li role="none">
-                    <a role="treeitem" aria-current="page" href="Gallery.html">
-                        <div class="nav-icon bx bxs-photo-album"></div>
-                        <p>Gallery</p>
+                    <a aria-current="page" href="Gallery.html" role="treeitem">
+                        <div class="nav-icon bx bxs-photo-album">
+                        </div>
+                        <p>
+                            Gallery
+                        </p>
                     </a>
                 </li>
                 <li role="none">
-                    <a role="treeitem" href="../Menu/Menu.html">
-                        <div class="nav-icon bx bxs-dish"></div>
-                        <p>Menu</p>
+                    <a href="../Menu/Menu.html" role="treeitem">
+                        <div class="nav-icon bx bxs-dish">
+                        </div>
+                        <p>
+                            Menu
+                        </p>
                     </a>
                 </li>
                 <li role="none">
-                    <a role="treeitem" href="../Crew/Crew.html">
-                        <div class="nav-icon bx bxs-id-card"></div>
-                        <p>About</p>
+                    <a href="../Crew/Crew.html" role="treeitem">
+                        <div class="nav-icon bx bxs-id-card">
+                        </div>
+                        <p>
+                            About
+                        </p>
                     </a>
                 </li>
             </ul>
         </nav>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             var elem = document.querySelector('.masonry-gallery');
             var msnry = new Masonry(elem, {
-                // options
                 itemSelector: '.gallery-item',
                 columnWidth: '.gallery-item',
                 percentPosition: true,
                 gutter: 10,
-                fitWidth: true
+                fitWidth: true,
+                initLayout: false
             });
-    
-            imagesLoaded(elem).on('progress', function(instance) {
-                // layout Masonry after each image loads
+
+            imagesLoaded(elem).on('progress', function (instance) {
                 msnry.layout();
             });
         });
-    </script> 
+    </script>
     <script>
         const navbar = document.querySelector('.navigation');
         const body = document.querySelector('.masonry-gallery');
         var navgap = navbar.offsetHeight + 20;
         body.style.paddingBottom += navgap + 'px';
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Open modal when an image is clicked
+            $(document).on('click', '.gallery-item', function () {
+                var modal = $('#myModal');
+                var modalImg = $('#modal-image');
+                var images = $('.gallery-item');
+                var currentIndex = $(this).index();
+
+                // Set the current image in the modal
+                modalImg.attr('src', $(this).attr('src'));
+
+                // Show modal
+                modal.css('display', 'grid');
+
+                // Close modal when clicked outside the image
+                $(document).mouseup(function (e) {
+                    if (!modalImg.is(e.target) && !$('.left-arrow').is(e.target) && !$('.right-arrow').is(e.target) && modalImg.has(e.target).length === 0) {
+                        modal.css('display', 'none');
+                    }
+                });
+
+
+                // Close modal when close button is clicked
+                $('.close').click(function () {
+                    modal.css('display', 'none');
+                });
+
+                // Scroll through images with left and right arrows, or with the on screen "bx bx-left-arrow" and "bx bx-right-arrow" icons
+                $(document).keydown(function (e) {
+                    if (e.keyCode == 37) { // Left arrow
+                        scrollLeft();
+                    } else if (e.keyCode == 39) { // Right arrow
+                        scrollRight();
+                    }
+                });
+
+                $('.left-arrow').click(scrollLeft);
+                $('.right-arrow').click(scrollRight);
+
+                function scrollLeft() {
+                    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                    modalImg.attr('src', $(images[currentIndex]).attr('src'));
+                }
+
+                function scrollRight() {
+                    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                    modalImg.attr('src', $(images[currentIndex]).attr('src'));
+                }
+
+            });
+
+            // Close modal when escape key is pressed
+            $(document).keydown(function (e) {
+                if (e.keyCode == 27) { // Escape key
+                    $('#myModal').css('display', 'none');
+                }
+            });
+        });
     </script>
 </body>
 </html>
