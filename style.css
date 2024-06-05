@@ -662,6 +662,17 @@ body {
     overflow: auto;
 }
 
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .bx-x-circle {
     position: absolute;
     cursor: pointer;
@@ -672,23 +683,11 @@ body {
 }
 
 .left-arrow {
-    position: absolute;
-    cursor: pointer;
-    color: #fff;
-    font-size: 2rem;
-    top: 50%;
     left: 10px;
-    transform: translateY(-50%);
 }
 
 .right-arrow {
-    position: absolute;
-    cursor: pointer;
-    color: #fff;
-    font-size: 2rem;
-    top: 50%;
     right: 10px;
-    transform: translateY(-50%);
 }
 
 .modal-content {

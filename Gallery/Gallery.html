@@ -187,13 +187,12 @@
                     }
                 });
 
-
                 // Close modal when close button is clicked
                 $('.close').click(function () {
                     modal.css('display', 'none');
                 });
 
-                // Scroll through images with left and right arrows, or with the on screen "bx bx-left-arrow" and "bx bx-right-arrow" icons
+                // Scroll through images with left and right arrows, or with the on screen "left-arrow" and "right-arrow" icons
                 $(document).keydown(function (e) {
                     if (e.keyCode == 37) { // Left arrow
                         scrollLeft();
