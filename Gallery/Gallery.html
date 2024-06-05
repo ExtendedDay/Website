@@ -110,9 +110,9 @@
         </nav>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var elem = document.querySelector('.masonry-gallery');
-            var msnry = new Masonry(elem, {
+        $(document).ready(function () {
+            var $elem = $('.masonry-gallery');
+            var msnry = new Masonry($elem[0], {
                 itemSelector: '.gallery-item',
                 columnWidth: '.gallery-item',
                 percentPosition: true,
@@ -120,12 +120,29 @@
                 fitWidth: true,
                 initLayout: false
             });
-
-            imagesLoaded(elem).on('progress', function (instance) {
+    
+            $elem.imagesLoaded().progress(function () {
+                msnry.layout();
+            });
+    
+            // Trigger layout on window resize
+            $(window).resize(function () {
+                msnry.layout();
+            });
+    
+            // Trigger layout on orientation change
+            $(window).on('orientationchange', function () {
+                msnry.layout();
+            });
+    
+            // Initial layout after all images have loaded
+            $elem.imagesLoaded().done(function () {
                 msnry.layout();
             });
         });
     </script>
+    
+    
     <script>
         const navbar = document.querySelector('.navigation');
         const body = document.querySelector('.masonry-gallery');
