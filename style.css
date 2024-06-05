@@ -631,12 +631,8 @@ body {
 }
 
 .masonry-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    /* Adjust minmax values as needed */
 
     .gallery-item {
-        /* width: 50%; */
         aspect-ratio: auto;
         min-width: 150px;
         max-width: 179px;
@@ -645,8 +641,10 @@ body {
         box-shadow: 0 1px 4px hsl(0 0 0/0.5);
     }
 
-    @media screen and (min-width: 600px) {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    .width-2 {
+        min-width: 300px;
+        max-width: 358px;
     }
 }
 
@@ -700,7 +698,7 @@ body {
 
 .modal-content img {
     aspect-ratio: auto;
-    
+    max-height: 98dvh;
     max-width: 100%;
     border-radius: 1rem;
     box-shadow: 0 1px 4px hsl(0 0 0/0.5);

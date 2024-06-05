@@ -9,9 +9,13 @@
     </title>
     <link href="../style.css" rel="stylesheet" />
     <link href="../Fonts/boxicons-2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="imagesloaded.pkgd.min.js"></script>
-    <script src="masonry.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="imagesloaded.pkgd.min.js">
+    </script>
+    <script src="masonry.pkgd.min.js">
+    </script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="gallery-header">
@@ -32,30 +36,20 @@
         </div>
         <div class="gallery-container">
             <div class="masonry-gallery">
-                <img alt="" class="gallery-item" src="Images/100-300x150.webp" />
-                <img alt="" class="gallery-item" src="Images/1003-300x400.webp" />
-                <img alt="" class="gallery-item" src="Images/103-400x300.webp" />
-                <img alt="" class="gallery-item" src="Images/13-400x300.webp" />
-                <img alt="" class="gallery-item" src="Images/161-300x150.webp" />
-                <img alt="" class="gallery-item" src="Images/23-300x400.webp" />
-                <img alt="" class="gallery-item" src="Images/43-300x380.webp" />
-                <img alt="" class="gallery-item" src="Images/54-300x280.webp" />
-                <img alt="" class="gallery-item" src="Images/56-400x300.webp" />
-                <img alt="" class="gallery-item" src="Images/61-300x280.webp" />
-                <img alt="" class="gallery-item" src="Images/72-300x200.webp" />
-                <img alt="" class="gallery-item" src="Images/76-300x150.webp" />
-                <img alt="" class="gallery-item" src="Images/783-300x300.webp" />
-                <img alt="" class="gallery-item" src="Images/829-300x280.webp" />
-                <img alt="" class="gallery-item" src="Images/90-300x200.webp" />
+                <div class="grid-sizer"></div>
+               
             </div>
         </div>
-        <div id="myModal" class="modal">
-            <div class="bx bx-left-arrow left-arrow"></div>
-            <div class="modal-content">
-                <div class="bx bx-x-circle close"></div>
-                <img id="modal-image" alt="Modal Image" />
+        <div class="modal" id="myModal">
+            <div class="bx bx-left-arrow left-arrow">
             </div>
-            <div class="bx bx-right-arrow right-arrow"></div>
+            <div class="modal-content">
+                <div class="bx bx-x-circle close">
+                </div>
+                <img alt="Modal Image" id="modal-image" />
+            </div>
+            <div class="bx bx-right-arrow right-arrow">
+            </div>
         </div>
     </main>
     <footer>
@@ -113,18 +107,19 @@
         $(document).ready(function () {
             var $elem = $('.masonry-gallery');
             var msnry = new Masonry($elem[0], {
-                itemSelector: '.gallery-item',
                 columnWidth: '.gallery-item',
-                percentPosition: true,
-                gutter: 10,
+                itemSelector: '.gallery-item',
                 fitWidth: true,
-                initLayout: false
+                gutter: 10,
+                initLayout: true,
+                lazyload: true,
+                originTop: true
             });
-    
+
             $elem.imagesLoaded().progress(function () {
                 msnry.layout();
             });
-    
+
             // Debounce function to limit the rate of layout recalculations
             function debounce(func, wait) {
                 var timeout;
@@ -133,32 +128,30 @@
                     timeout = setTimeout(func, wait);
                 };
             }
-    
+
             // Layout recalculation
             var relayoutMasonry = debounce(function () {
                 msnry.layout();
             }, 100);
-    
+
             // Trigger layout on window resize
             $(window).resize(function () {
                 relayoutMasonry();
             });
-    
+
             // Trigger layout on orientation change
             $(window).on('orientationchange', function () {
                 setTimeout(function () {
                     relayoutMasonry();
                 }, 500); // Delay to ensure orientation change is fully processed
             });
-    
+
             // Initial layout after all images have loaded
             $elem.imagesLoaded().done(function () {
                 msnry.layout();
             });
         });
     </script>
-    
-    
     <script>
         const navbar = document.querySelector('.navigation');
         const body = document.querySelector('.masonry-gallery');
