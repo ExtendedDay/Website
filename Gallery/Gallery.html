@@ -125,14 +125,30 @@
                 msnry.layout();
             });
     
+            // Debounce function to limit the rate of layout recalculations
+            function debounce(func, wait) {
+                var timeout;
+                return function () {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(func, wait);
+                };
+            }
+    
+            // Layout recalculation
+            var relayoutMasonry = debounce(function () {
+                msnry.layout();
+            }, 100);
+    
             // Trigger layout on window resize
             $(window).resize(function () {
-                msnry.layout();
+                relayoutMasonry();
             });
     
             // Trigger layout on orientation change
             $(window).on('orientationchange', function () {
-                msnry.layout();
+                setTimeout(function () {
+                    relayoutMasonry();
+                }, 500); // Delay to ensure orientation change is fully processed
             });
     
             // Initial layout after all images have loaded
