@@ -106,8 +106,13 @@
     </footer>
     <script>
         $(document).ready(function () {
-            fetch('https://script.google.com/u/3/home/projects/1ax_f6ux9SDk_z23zKKM7TT9ZYyIQoCXBCQVSlmtGKq275148qOeqxdXE')
-                .then(response => response.json())
+            fetch('https://script.google.com/macros/s/AKfycbzOaJHEEC4HGMU39GrmQXPJOY_JfIzs4FVrBjoBTABjXYvH2wd9nIi0qYJLGe9qKhwaXw/exec')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
                 .then(images => {
                     const gallery = $('.masonry-gallery');
                     images.forEach(image => {
@@ -135,6 +140,7 @@
                 })
                 .catch(error => console.error('Error fetching images:', error));
         });
+
     </script>
     <script>
         $(document).ready(function () {
