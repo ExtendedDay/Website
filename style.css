@@ -59,6 +59,12 @@ body {
     overflow-x: clip;
     overflow: hidden;
 
+
+    @media screen and (min-width: 600px) {
+        grid-template-areas: "Left-tree title-bar Right-tree" "Left-tree sign-container Right-tree";
+
+        grid-template-columns: minmax(0, 1fr) 1fr minmax(0, 1fr);
+    }
 }
 
 .title-bar {
@@ -173,28 +179,27 @@ body {
     z-index: 1;
 }
 
-.coming-soon-placer {
-    display: grid;
-    place-content: center;
+/* fit the trees to the sides of the screen. Left should stick to the right side of its box, right should stick to the left side of its box */
+.tree-left,
+.tree-right {
+    overflow: clip;
+    height: 100%;
+    z-index: -1;
+    justify-self: center;
+    transform: translateY(13%);
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+
 }
 
-.coming-soon-alert-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5em;
-    border-radius: 10px;
-    margin-top: 3rem;
-    background-color: var(--arylideYellow100);
+.tree-left {
+    grid-area: Left-tree;
+}
 
-    .coming-soon-text {
-        font-family: SunnySpells;
-        font-size: 50px;
-        color: var(--pureBlack);
-        text-shadow: 1px 2px 2.5px hsl(0 0 0);
-        text-align: center;
-        text-transform: uppercase;
-    }
+.tree-right {
+    grid-area: Right-tree;
 }
 
 /* Events Page */
