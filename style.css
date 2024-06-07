@@ -644,7 +644,7 @@ body {
     .gallery-item {
         aspect-ratio: auto;
         min-width: 150px;
-        max-width: 40vw;
+        max-width: 179px;
         margin-bottom: 10px;
         border-radius: 1rem;
         box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.5);
