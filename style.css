@@ -211,12 +211,7 @@ body {
     max-width: 100vw;
     overflow: clip;
 
-    .events-title {
-        position: absolute;
-        left: -100000px;
-        overflow: hidden;
 
-    }
 
     >img {
         filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
@@ -389,6 +384,12 @@ body {
     }
 }
 
+.hidden-title {
+    position: absolute;
+    left: -100000px;
+    overflow: hidden;
+
+}
 
 /* Navbar */
 .navigation {
@@ -470,19 +471,9 @@ body {
     max-width: 100vw;
     overflow: clip;
 
-    .menu-title {
-        position: absolute;
-        top: 100px;
-        left: 65px;
-        font-family: StickyMemos;
-        font-size: 53px;
-        color: var(--pureBlack);
-        text-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.5);
-        text-align: center;
-    }
-
     >img {
-        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.5));
+        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
+        width: 100%;
     }
 }
 
@@ -589,21 +580,9 @@ body {
     overflow: clip;
     display: grid;
 
-    .gallery-title {
-        position: absolute;
-        top: 100px;
-        right: 60px;
-        font-family: ActionIs;
-        font-size: 53px;
-        color: var(--calPolyGreen100);
-        text-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.5);
-        text-align: center;
-    }
-
     >img {
-        margin-left: auto;
-        margin-right: 0;
-        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.5));
+        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
+        width: 100%;
     }
 }
 
@@ -716,25 +695,11 @@ body {
     overflow: clip;
     display: grid;
 
-    .about-title {
-        position: absolute;
-        top: 100px;
-        right: 30px;
-        font-family: SunnySpells;
-        font-size: 42px;
-        color: var(--indianRed100);
-        text-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.5);
-        text-align: center;
-    }
-
     >img {
-        margin-left: auto;
-        margin-right: 0;
-        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.5));
+        filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
+        width: 100%;
     }
 }
-
-/* Staff Page */
 
 .staff-container {
     margin-top: 2em;
@@ -841,62 +806,8 @@ body {
 
 /* Fonts */
 @font-face {
-    font-family: Flower Power;
-    src: url(Fonts/SpringtimeFlowersRegular-8M1mz.otf);
-}
-
-@font-face {
     font-family: SunnySpells;
     src: url(Fonts/SunnyspellsRegular-MV9ze.otf);
-}
-
-@font-face {
-    font-family: StickyMemos;
-    src: url(Fonts/Sticky\ Memos\ Demo.otf);
-}
-
-@font-face {
-    font-family: ActionIs;
-    src: url(Fonts/Actionis-6Yex.ttf);
-}
-
-@font-face {
-    font-family: CuteStitch;
-    src: url(Fonts/Cute\ Stitch.otf);
-}
-
-@keyframes wobble-hor-bottom {
-
-    0%,
-    100% {
-        transform: translateX(0);
-        transform-origin: 50% 50%
-    }
-
-    10% {
-        transform: translateX(-30px) rotate(-6deg)
-    }
-
-    20% {
-        transform: translateX(15px) rotate(6deg)
-    }
-
-    30% {
-        transform: translateX(-15px) rotate(-3.6deg)
-    }
-
-    40% {
-        transform: translateX(9px) rotate(2.4deg)
-    }
-
-    50% {
-        transform: translateX(-6px) rotate(-1.2deg)
-    }
-
-    60% {
-        transform: translateX(0);
-        transform-origin: 50% 50%
-    }
 }
 
 /****** APPLE SAFARI SPECIFIC STYLING ******/
