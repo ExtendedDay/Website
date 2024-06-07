@@ -85,29 +85,6 @@ body {
         transform: rotate(-1.72deg);
         filter: drop-shadow(1px 2px 3px hsla(0, 0%, 0%, 0.75));
     }
-
-    >.title-container {
-        max-height: fit-content;
-        min-width: 310px;
-        max-width: 448px;
-        /* margin: 8em 2em 2em 2em; */
-        margin-inline: 2em;
-        margin-block: 1em;
-        padding: 1em 0.2em;
-        background-color: hsl(60 36% 50%);
-        transform: rotate(-1.72deg);
-        border-radius: 29px;
-        box-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.25);
-
-        >.title {
-            font-family: SunnySpells;
-            font-size: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
-            text-shadow: 1px 2px 3px hsla(0, 0%, 0%, 0.75);
-            text-align: center;
-            line-height: 90%;
-            color: var(--arylideYellow100);
-        }
-    }
 }
 
 .sign-container {
@@ -142,7 +119,7 @@ body {
         text-decoration: none;
         font-size: 50px;
         font-family: SunnySpells;
-        text-shadow: 1px 4px 0 hsl(13 18% 48%);
+        text-shadow: 2px 3px 3px hsla(0, 0%, 0%, 0.5);
     }
 
     #button1 {
@@ -200,7 +177,8 @@ body {
     height: 100%;
     z-index: -1;
     justify-self: center;
-    transform: translateY(13%);
+    translate: 0% 8%;
+    filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
 
     @media screen and (max-width: 600px) {
         display: none;
@@ -214,6 +192,7 @@ body {
 
 .tree-right {
     grid-area: Right-tree;
+    z-index: -2;
 }
 
 /* Events Page */
@@ -384,15 +363,11 @@ body {
     place-self: center;
     margin-bottom: 0.25em;
     margin-top: 0.15em;
-    padding: 0.25em;
+    padding-inline: 2ch;
     text-align: center;
     text-wrap: balance;
-    letter-spacing: 0.03em;
-
-    >p {
-        font-size: clamp(0.75rem, 0.4907rem + 1.1215vw, 1.5rem);
-
-    }
+    letter-spacing: 0.05em;
+    font-size: clamp(0.75rem, 0.1467rem + 2.6087vw, 1.125rem);
 }
 
 .hidden-title {

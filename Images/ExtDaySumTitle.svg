@@ -27,8 +27,8 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      inkscape:zoom="0.36569515"
-     inkscape:cx="1453.3964"
-     inkscape:cy="304.89877"
+     inkscape:cx="1346.7502"
+     inkscape:cy="373.26172"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
@@ -87,7 +87,7 @@
       <feFlood
          result="flood"
          in="SourceGraphic"
-         flood-opacity="0.839216"
+         flood-opacity="0.54000000000000004"
          flood-color="rgb(0,0,0)"
          id="feFlood229" />
       <feGaussianBlur
