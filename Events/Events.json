@@ -1,15 +1,5 @@
 [
     {
-        "date": "06/04/2024",
-        "time": "9:00am-12:00pm",
-        "class": "b",
-        "location": "Corvallis Park",
-        "link": "https://maps.app.goo.gl/jEc7V2s5iFZLQMic7",
-        "cost": "$0.00",
-        "optional": "false",
-        "description": "Corvallis Park in Bakersfield is a safe, inviting spot where children can enjoy outdoor activities while in daycare. The park features well-maintained trails and lush greenery, perfect for fun and exploration."
-    },
-    {
         "date": "06/05/2024",
         "time": "9:00am-12:00pm",
         "class": "a",

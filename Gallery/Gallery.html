@@ -15,7 +15,7 @@
     </script>
     <script src="masonry.pkgd.min.js">
     </script>
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
     <header class="gallery-header">
@@ -36,9 +36,15 @@
         </div>
         <div class="gallery-container">
             <div class="masonry-gallery">
-                <div class="grid-sizer">
-
-                </div>
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164400768.RAW-01.MP.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164344366.RAW-01.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164350716.RAW-01.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164402985.RAW-01.MP.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164436776.RAW-01.MP.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164437880.RAW-01.MP.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_164452681.RAW-01.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_171830529.RAW-01.MP.COVER.jpg" />
+                <img alt="" class="gallery-item" src="Images/PXL_20240605_171831599.RAW-01.MP.COVER.jpg" />
             </div>
         </div>
         <div class="modal" id="myModal">
@@ -106,51 +112,13 @@
     </footer>
     <script>
         $(document).ready(function () {
-            fetch('https://script.google.com/macros/s/AKfycbzOaJHEEC4HGMU39GrmQXPJOY_JfIzs4FVrBjoBTABjXYvH2wd9nIi0qYJLGe9qKhwaXw/exec')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(images => {
-                    const gallery = $('.masonry-gallery');
-                    images.forEach(image => {
-                        const imgElement = $('<img>')
-                            .attr('src', image.url)
-                            .attr('alt', image.name)
-                            .addClass('gallery-item');
-                        gallery.append(imgElement);
-                    });
-
-                    // Initialize Masonry after images are loaded
-                    const msnry = new Masonry(gallery[0], {
-                        columnWidth: '.gallery-item',
-                        itemSelector: '.gallery-item',
-                        fitWidth: true,
-                        gutter: 10,
-                        initLayout: true,
-                        lazyload: true,
-                        originTop: true
-                    });
-
-                    gallery.imagesLoaded().progress(function () {
-                        msnry.layout();
-                    });
-                })
-                .catch(error => console.error('Error fetching images:', error));
-        });
-
-    </script>
-    <script>
-        $(document).ready(function () {
             var $elem = $('.masonry-gallery');
             var msnry = new Masonry($elem[0], {
                 columnWidth: '.gallery-item',
                 itemSelector: '.gallery-item',
                 fitWidth: true,
                 gutter: 10,
-                initLayout: true,
+                initLayout: false,
                 lazyload: true,
                 originTop: true
             });

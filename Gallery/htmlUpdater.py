@@ -16,7 +16,7 @@ def update_and_beautify_gallery_html():
             masonry_div.clear()
         
         # List all.webp files in the directory
-        image_files = [f for f in os.listdir(directory_path) if f.endswith('.webp')]
+        image_files = [f for f in os.listdir(directory_path) if f.endswith('.jpg')]
         
         # Generate img tags for each image and append to the masonry-gallery div
         for image_file in image_files:
