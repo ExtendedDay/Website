@@ -23,26 +23,31 @@
         <h1 class="hidden-title">Gallery</h1>
     </header>
     <main>
-        <div class="gallery-intro-container">
-            <h2 class="gallery-subtitle">
-                Welcome To our Gallery!
-            </h2>
-            <p>
-                We will be taking photos of your children's day throughout the summer as they go on our various trips or as they participate in various activities. Please check back often to see new pictures!
-                <!-- For allergy concerns please contact Cal Ivy <a href="http://https://calivyprep.org/contact-us/" target="_blank" rel="noopener noreferrer">here.</a> -->
-            </p>
+        <div class="place-center">
+            <div class="gallery-intro-container">
+                <h2 class="gallery-subtitle">
+                    Welcome To our Gallery!
+                </h2>
+                <p>
+                    We will be taking photos of your children's day throughout the summer as they go on our various trips or as they participate in various activities. Please check back often to see new pictures!
+                    <!-- For allergy concerns please contact Cal Ivy <a href="http://https://calivyprep.org/contact-us/" target="_blank" rel="noopener noreferrer">here.</a> -->
+                </p>
+            </div>
         </div>
-        <div class="gallery-container">
-            <div class="masonry-gallery">
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164400768.RAW-01.MP.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164344366.RAW-01.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164350716.RAW-01.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164402985.RAW-01.MP.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164436776.RAW-01.MP.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164437880.RAW-01.MP.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_164452681.RAW-01.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_171830529.RAW-01.MP.COVER.jpg" />
-                <img alt="" class="gallery-item" src="Images/PXL_20240605_171831599.RAW-01.MP.COVER.jpg" />
+        <div class="place-center">
+            <div class="gallery-container">
+                <div class="masonry-gallery">
+                    <div class="grid-sizer"></div>
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164400768.RAW-01.MP.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164344366.RAW-01.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164350716.RAW-01.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164402985.RAW-01.MP.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164436776.RAW-01.MP.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164437880.RAW-01.MP.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_164452681.RAW-01.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_171830529.RAW-01.MP.COVER.jpg" />
+                    <img alt="" class="gallery-item" src="Images/PXL_20240605_171831599.RAW-01.MP.COVER.jpg" />
+                </div>
             </div>
         </div>
         <div class="modal" id="myModal">
@@ -112,9 +117,10 @@
         $(document).ready(function () {
             var $elem = $('.masonry-gallery');
             var msnry = new Masonry($elem[0], {
-                columnWidth: '.gallery-item',
+                columnWidth: '.grid-sizer',
                 itemSelector: '.gallery-item',
-                fitWidth: true,
+                fitWidth: false,
+                percentPosition: true,
                 gutter: 10,
                 initLayout: false,
                 lazyload: true,

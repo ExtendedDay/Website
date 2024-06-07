@@ -50,6 +50,12 @@ body {
     background-color: var(--asparagus100);
 }
 
+.place-center {
+    display: grid;
+    place-items: center;
+}
+
+
 /* Home Page Styles */
 .home-screen {
     width: 100vw;
@@ -170,7 +176,6 @@ body {
     z-index: 1;
 }
 
-/* fit the trees to the sides of the screen. Left should stick to the right side of its box, right should stick to the left side of its box */
 .tree-left,
 .tree-right {
     overflow: clip;
@@ -198,7 +203,8 @@ body {
 /* Events Page */
 .events-header {
     position: relative;
-    max-width: 100vw;
+    width: 100vw;
+    max-width: 600px;
     overflow: clip;
 
 
@@ -218,6 +224,8 @@ body {
     transform: rotate(1deg);
     background-color: var(--arylideYellow100);
     box-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.25);
+    max-width: 550px;
+    width: 80vw;
 
     >h2 {
         text-align: center;
@@ -234,6 +242,7 @@ body {
         justify-content: start;
         gap: 1em;
         font: 17px Boogaloo, sans-serif;
+        margin-inline: 2em;
     }
 
     .classColorBox {
@@ -253,7 +262,9 @@ body {
 
 .event-list-container {
     display: grid;
-    margin: 0.75em;
+    width: 92vw;
+    max-width: 600px;
+
 
     .event-card {
         display: grid;
@@ -454,7 +465,8 @@ body {
 /* Menu Page */
 .menu-header {
     position: relative;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 600px;
     overflow: clip;
 
     >img {
@@ -474,6 +486,8 @@ body {
     transform: rotate(-1.25deg);
     text-align: center;
     box-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.25);
+    width: 92vw;
+    max-width: 550px;
 
     >h2 {
         font-size: 24px;
@@ -494,6 +508,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-gap: 0.5em;
     margin-inline: 0.5em;
+    width: 90vw;
+    max-width: 920px;
 }
 
 .menu-day-container {
@@ -562,13 +578,15 @@ body {
 /* Gallery Page */
 .gallery-header {
     position: relative;
-    max-width: 100vw;
+    width: 100vw;
     overflow: clip;
     display: grid;
+    justify-content: end;
 
     >img {
         filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
         width: 100%;
+        max-width: 600px;
     }
 }
 
@@ -583,6 +601,9 @@ body {
     transform: rotate(-1.25deg);
     box-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.25);
     text-align: center;
+    max-width: 550px;
+    width: 80vw;
+    
 
     >h2 {
         font-size: 24px;
@@ -606,15 +627,37 @@ body {
 }
 
 .masonry-gallery {
+    width: 90vw;
+    margin-left: 10px;
+    display: grid;
+    
 
     .gallery-item {
         aspect-ratio: auto;
-        min-width: 150px;
-        max-width: 179px;
         margin-bottom: 10px;
         border-radius: 1rem;
         box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.5);
     }
+
+    .grid-sizer,
+    .gallery-item {
+        width: calc(50% - 10px);
+    }
+
+    @media screen and (min-width: 480px) {
+        .grid-sizer,
+        .gallery-item {
+            width: calc(33.33% - 10px);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .grid-sizer,
+        .gallery-item {
+            width: calc(25% - 10px);
+        }
+    }
+
 }
 
 .modal {
@@ -677,9 +720,11 @@ body {
 /* About Page */
 .about-header {
     position: relative;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 600px;
     overflow: clip;
     display: grid;
+    margin-left: auto;
 
     >img {
         filter: drop-shadow(3px 2px 4px hsla(0, 0%, 0%, 0.25));
@@ -699,7 +744,7 @@ body {
     display: grid;
     place-content: start;
     padding: 1em;
-    border-radius: 20vw;
+    border-radius: 90px;
     background-color: var(--blueGray100);
     box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.5);
     grid-template-columns: minmax(80px, 30%) 70%;
