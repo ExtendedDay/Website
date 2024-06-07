@@ -72,8 +72,19 @@ body {
 
 .title-bar {
     grid-area: title-bar;
-    display: flex;
+    display: grid;
     place-self: center;
+
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        max-width: 375px;
+        padding-inline: 1.25rem;
+        transform: rotate(-1.72deg);
+        filter: drop-shadow(1px 2px 3px hsla(0, 0%, 0%, 0.75));
+    }
 
     >.title-container {
         max-height: fit-content;
