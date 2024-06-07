@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../Fonts/boxicons-2.1.4/css/boxicons.min.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header class="about-header">
@@ -16,41 +17,50 @@
     </header>
     <main>
         <div class="staff-container">
-            <div class="staff-card">
+            <div class="staff-card" data-expanded="false">
                 <div class="staff-img-container">
                     <img src="Ciara.webp" role="presentation" alt="">
                 </div>
+                <h2 class="staff-name">Ms. Ciara</h2>
                 <div class="staff-info-container">
-                    <h2 class="staff-name">Ms. Ciara</h2>
-                    <p class="staff-description">Hey! I’m Ms. Ciara as many of you already know. I have been working at Cal Ivy Prep for 3 years and have done childcare for 7 years altogether. I’m originally from Grand Rapids, Michigan. I have one 7 year old girl of my own. Arts and crafts is my favorite activity to do with the children, especially making slime. I hope we have a fantastic and fun summer this year. I can’t wait!</p>
+                    <p class="staff-description Ciara">Hey! I’m Ms. Ciara as many of you already know. I have been working at Cal Ivy Prep for 3 years and have done childcare for 7 years altogether. I’m originally from
+                        Grand Rapids, Michigan. I have one 7 year old girl of my own. Arts and crafts is my favorite activity to do with the children, especially making slime. I hope we have a fantastic and fun summer
+                        this year. I can’t wait!</p>
                 </div>
+                <div class="expand-arrow"><i class='bx bxs-chevron-down'></i></div>
             </div>
-            <div class="staff-card">
+            <div class="staff-card" data-expanded="false">
                 <div class="staff-img-container">
                     <img src="blank-face-icon-16.jpg" role="presentation" alt="">
                 </div>
+                <h2 class="staff-name">Mrs. Ariel</h2>
                 <div class="staff-info-container">
-                    <h2 class="staff-name">Mrs. Ariel</h2>
-                    <p class="staff-description">Hello! My name is Ms. Ariel, I started working with Cal Ivy Prep this past December, my first time working in a daycare setting. Previously I worked with special education at Bakersfield City School District for about three years, having a great passion for working with children. This spring I recently graduated from CSUB with my bachelor's in Child, Adolescent, and Family Studies and am planning to continue school to obtain my master's. I’m originally from the island of Oahu and have a two-year-old daughter of my own! But I love playing games, and sports, and being outside with the children. I am super excited to be spending all summer with everyone and ready to have a great time!</p>
+                    <p class="staff-description Ariel">Hello! My name is Ms. Ariel, I started working with Cal Ivy Prep this past December, my first time working in a daycare setting. Previously I worked with special
+                        education at Bakersfield City School District for about three years, having a great passion for working with children. This spring I recently graduated from CSUB with my bachelor's in Child,
+                        Adolescent, and Family Studies and am planning to continue school to obtain my master's. I’m originally from the island of Oahu and have a two-year-old daughter of my own! But I love playing
+                        games, and sports, and being outside with the children. I am super excited to be spending all summer with everyone and ready to have a great time!</p>
                 </div>
+                <div class="expand-arrow"><i class='bx bxs-chevron-down'></i></div>
             </div>
-            <div class="staff-card">
+            <div class="staff-card" data-expanded="false">
                 <div class="staff-img-container">
                     <img src="blank-face-icon-16.jpg" role="presentation" alt="">
                 </div>
+                <h2 class="staff-name">Ms. Noemi</h2>
                 <div class="staff-info-container">
-                    <h2 class="staff-name">Ms. Noemi</h2>
-                    <p class="staff-description">Teacher Description or bio or fun facts etc.</p>
+                    <p class="staff-description Noemi">Teacher Description or bio or fun facts etc.</p>
                 </div>
+                <div class="expand-arrow"><i class='bx bxs-chevron-down'></i></div>
             </div>
-            <div class="staff-card">
+            <div class="staff-card" data-expanded="false">
                 <div class="staff-img-container">
                     <img src="blank-face-icon-16.jpg" role="presentation" alt="">
                 </div>
+                <h2 class="staff-name">Mr. Mateo</h2>
                 <div class="staff-info-container">
-                    <h2 class="staff-name">Mr. Mateo</h2>
-                    <p class="staff-description">Teacher Description or bio or fun facts etc.</p>
+                    <p class="staff-description Mateo">Teacher Description or bio or fun facts etc.</p>
                 </div>
+                <div class="expand-arrow"><i class='bx bxs-chevron-down'></i></div>
             </div>
         </div>
     </main>
@@ -97,5 +107,49 @@
 
         body.style.paddingBottom += navgap + 'px';
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.expand-arrow').click(function () {
+                const $arrow = $(this);
+                const $card = $arrow.closest('.staff-card');
+                const $description = $card.find('.staff-description');
+                const isExpanded = $card.attr('data-expanded') === 'true';
+                const initialHeight = 183;
+                const animationDuration = 400; 
+
+                if (!isExpanded) {
+                    const startCardHeight = $card.height();
+                    const startDescriptionHeight = $description.height();
+                    $card.css('height', 'auto'); 
+                    $description.css('height', 'auto'); 
+                    const endCardHeight = $card.prop('scrollHeight');
+                    const endDescriptionHeight = $description.prop('scrollHeight');
+                    $card.css('height', startCardHeight); 
+                    $description.css('height', startDescriptionHeight); 
+
+                    $card[0].offsetHeight;
+                    $description[0].offsetHeight;
+
+                    $card.attr('data-expanded', 'true');
+                    $arrow.addClass('flip-arrow');
+
+                    $card.animate({ height: endCardHeight }, animationDuration);
+                    $description.animate({ height: endDescriptionHeight }, animationDuration);
+                } else {
+                    const endHeight = initialHeight;
+
+                    $card.attr('data-expanded', 'false');
+                    $arrow.removeClass('flip-arrow');
+
+                    $card[0].offsetHeight;
+                    $description[0].offsetHeight;
+
+                    $card.animate({ height: endHeight }, animationDuration);
+                    $description.animate({ height: '6rem' }, animationDuration);
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

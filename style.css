@@ -496,7 +496,7 @@ body {
     transform: rotate(-1.25deg);
     text-align: center;
     box-shadow: 3px 2px 4px hsla(0, 0%, 0%, 0.25);
-    
+
     >h2 {
         font-size: 24px;
         text-transform: uppercase;
@@ -649,12 +649,6 @@ body {
         border-radius: 1rem;
         box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.5);
     }
-
-
-    .width-2 {
-        min-width: 300px;
-        max-width: 80vw;
-    }
 }
 
 .modal {
@@ -751,25 +745,32 @@ body {
 
 .staff-card {
     display: grid;
-    place-content: center;
+    place-content: start;
     padding: 1em;
-    border-radius: 20rem;
+    border-radius: 20vw;
     background-color: var(--blueGray100);
     box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.5);
     grid-template-columns: minmax(80px, 30%) 70%;
     border: 4px solid var(--indianRed100);
     border-left-width: 5px;
     border-right-width: 5px;
+    height: 183px; /* Initial height */
+    min-height: 183px;
     max-width: 500px;
-    overflow: clip;
-    max-height: 12rem;
+    overflow: hidden; /* Change overflow to hidden */
+    grid-template-areas: 
+        "img name" 
+        "img info" 
+        "arrow arrow";
 
     .staff-img-container {
+        grid-area: img;
         padding: 0.75rem;
         display: grid;
         place-content: center;
+        transform: translateY(6px);
 
-        >img {
+        > img {
             aspect-ratio: auto;
             width: 100%;
             max-width: 120px;
@@ -779,28 +780,60 @@ body {
         }
     }
 
-    .staff-info-container {
+    .staff-name {
+        grid-area: name;
+        align-self: start; /* Align at the top */
         font-family: Boogaloo, sans-serif;
-        font-size: clamp(0.75rem, 0.3478rem + 1.7391vw, 1rem);
+        font-size: clamp(1.125rem, 0.5217rem + 2.6087vw, 1.5rem);
+        text-transform: capitalize;
+        margin-bottom: 0.15em;
+        transform: rotate(-2deg);
+    }
 
+    .staff-info-container {
+        grid-area: info;
+        font-family: Boogaloo, sans-serif;
+        display: grid;
+        overflow: hidden; /* Change overflow to hidden */
+        height: auto; /* Let it grow naturally */
 
-        >h2 {
-            font-size: clamp(1.125rem, 0.5217rem + 2.6087vw, 1.5rem);
-            text-transform: capitalize;
-            margin-bottom: 0.15em;
-            transform: rotate(-2deg);
-        }
-
-        >p {
+        > .staff-description {
+            font-size: 15px;
+            grid-area: description;
             max-width: 90%;
-            max-height: 8rem;
-            overflow-y: scroll;
-            scrollbar-width: thin;
-            scrollbar-gutter: stable;
-            scrollbar-color: var(--indianRed100) var(--blueGray60);
             padding-inline-end: 0.25rem;
-            text-wrap: balance;
+            margin-block: 0.25em;
             text-align: center;
+        }
+    }
+
+    > .expand-arrow {
+        grid-area: arrow;
+        position: relative;
+        text-align: center;
+        width: min-content;
+        height: 12px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.75rem;
+        cursor: pointer;
+        color: var(--indianRed100);
+
+        > i {
+            transition: rotate 400ms ease-in-out;
+        }
+    }
+
+    .flip-arrow > i {
+        rotate: 180deg;
+    }
+
+    &[data-expanded="true"] {
+        height: auto; /* Allow height to expand to fit content */
+
+        .staff-info-container {
+            height: auto; /* Allow natural height */
         }
     }
 }
@@ -867,9 +900,9 @@ body {
 
 /****** APPLE SAFARI SPECIFIC STYLING ******/
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-    
+
     .title {
-        
+
         text-shadow: 1px 2px 3px hsla(0, 0%, 0%, 0.25) !important;
     }
 
@@ -877,18 +910,18 @@ body {
         text-shadow: 1px 2px 0 hsla(13, 18%, 48%, 0.75) !important;
     }
 
-    .event-date-container{}
+    .event-date-container {}
 
     .navigation {
-    
+
         >ul {
-    
+
             >li {
-            
+
                 >a {
 
                     &[aria-current="page"] {
-    
+
                         >p {
                             text-shadow: 1px 1px 4px hsl(49, 74%, 54%, 0.45);
                         }
@@ -908,7 +941,7 @@ body {
             text-shadow: 1px 2px 3px hsla(0, 0%, 0%, 0.25) !important;
         }
 
-        >p{
+        >p {
             text-shadow: 1px 2px 3px hsla(0, 0%, 0%, 0.5) !important;
         }
     }
@@ -923,7 +956,7 @@ body {
         }
     }
 
-    .gallery-title{
+    .gallery-title {
         text-shadow: 1px 2px 3px hsla(0, 0%, 0%, 0.25) !important;
     }
 
