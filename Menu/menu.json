@@ -1,144 +1,144 @@
-{ 
+{
     "6": [
         {
             "day": 3,
             "dayName": "Monday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Goldfish"],
+            "morning": ["Cold Cereal"],
+            "afternoon": ["Mac & Cheese with peas"]
         },
         {
             "day": 4,
             "dayName": "Tuesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Ritz"],
+            "morning": ["French Toast Sticks"],
+            "afternoon": ["BBQ Chicken Sandwich, Carrots with ranch"]
         },
         {
             "day": 5,
             "dayName": "Wednesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cooks Choice"],
+            "morning": ["Blueberry Bagels"],
+            "afternoon": ["Cheese Ziti with zucchini"]
         },
         {
             "day": 6,
             "dayName": "Thursday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Graham Crackers"],
+            "morning": ["Waffles"],
+            "afternoon": ["Chicken Primavera"]
         },
         {
             "day": 7,   
             "dayName": "Friday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Wheat Thins"],
+            "morning": ["Cooks Choice"],
+            "afternoon": ["Turkey Pot Pie"]
         },
         {
             "day": 10,
             "dayName": "Monday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Vanilla Wafers"],
+            "morning": ["Cold Cereal"],
+            "afternoon": ["Taco Bake with black beans & corn"]
         },
         {
             "day": 11,
             "dayName": "Tuesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Pretzels"],
+            "morning": ["Biscuits"],
+            "afternoon": ["Turkey & Cheese Sandwich, Broccoli with ranch"]
         },
         {
             "day": 12,
             "dayName": "Wednesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cheese & Crackers"],
+            "morning": ["Cinnamon Toast"],
+            "afternoon": ["Quesadilla & Beans"]
         },
         {
             "day": 13,  
             "dayName": "Thursday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cooks Choice"],
+            "morning": ["English Muffin"],
+            "afternoon": ["Gr. Turkey Stroganoff with carrots"]
         },
         {
             "day": 14,
             "dayName": "Friday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cookies"],
+            "morning": ["Cooks Choice"],
+            "afternoon": ["Alfredo with broccoli"]
         },
         {
             "day": 17,
             "dayName": "Monday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Ritz"],
+            "morning": ["Cold Cereal"],
+            "afternoon": ["Lasagna with spinach"]
         },
         {
             "day": 18,
             "dayName": "Tuesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cooks Choice"],
+            "morning": ["Apple Betty"],
+            "afternoon": ["English Muffin Pizza"]
         },
         {
             "day": 19,
             "dayName": "Wednesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Goldfish"],
+            "morning": ["Pancakes"],
+            "afternoon": ["Broccoli Beef over Rice"]
         },
         {
             "day": 20,  
             "dayName": "Thursday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Wheat Thins"],
+            "morning": ["Cinnamon Toast"],
+            "afternoon": ["Chicken Gravy over Mashed Potatoes"]
         },
         {
             "day": 21,
             "dayName": "Friday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Graham Crackers"],
+            "morning": ["Cooks Choice"],
+            "afternoon": ["Bowtie Pasta Salad with cubed Turkey"]
         },
         {
             "day": 24,
             "dayName": "Monday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cookies"],
+            "morning": ["Cold Cereal"],
+            "afternoon": ["Beef & Cheese Burrito with Beans"]
         },
         {
             "day": 25,
             "dayName": "Tuesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Pretzels"],
+            "morning": ["Biscuits"],
+            "afternoon": ["Grilled Cheese, Carrots with ranch"]
         },
         {
             "day": 26,
             "dayName": "Wednesday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cheez Its"],
+            "morning": ["Banana Muffin"],
+            "afternoon": ["Chicken Pasta with Broccoli"]
         },
         {
             "day": 27,
             "dayName": "Thursday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Vanilla Wafers"],
+            "morning": ["Blueberry Bagel"],
+            "afternoon": ["Turkey Wraps, Carrots with ranch"]
         },
         {
             "day": 28,
             "dayName": "Friday",
-            "snacks": ["pretzels"],
-            "morning": ["apple belly"],
-            "afternoon": ["beef & broccoli"]
+            "snacks": ["Cooks Choice"],
+            "morning": ["Cooks Choice"],
+            "afternoon": ["Cheese Enchiladas with corn"]
         }
     ]
 }
