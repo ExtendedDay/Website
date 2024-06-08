@@ -1,9 +1,11 @@
 import os
 from bs4 import BeautifulSoup
 
+# This script parses the names of all images in the processed directory and updates the html file accordingly
+
 def update_and_beautify_gallery_html():
     # Define the directory and HTML file paths
-    directory_path = 'Gallery/Images'
+    directory_path = 'Gallery/Images/processed'
     html_file_path = 'Gallery/Gallery.html'
     
     # Initialize BeautifulSoup object with the HTML file
@@ -18,9 +20,12 @@ def update_and_beautify_gallery_html():
         # List all.webp files in the directory
         image_files = [f for f in os.listdir(directory_path) if f.endswith('.jpg')]
         
+        # Append the grid-sizer div to the masonry-gallery div
+        masonry_div.append(BeautifulSoup('<div class="grid-sizer"></div>', 'html.parser'))
+
         # Generate img tags for each image and append to the masonry-gallery div
         for image_file in image_files:
-            img_tag = '<img alt="" src="Images/' + image_file + '" class="gallery-item">'
+            img_tag = '<img alt="" src="Images/processed/' + image_file + '" class="gallery-item">'
             masonry_div.append(BeautifulSoup(img_tag, 'html.parser'))
         
         # Move the file pointer to the beginning of the file before writing
