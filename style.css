@@ -648,6 +648,7 @@ body {
         .grid-sizer,
         .gallery-item {
             width: calc(33.33% - 10px);
+
         }
     }
 
@@ -657,7 +658,12 @@ body {
             width: calc(25% - 10px);
         }
     }
+}
 
+@media screen and (min-width: 768px) {
+    .masonry-gallery {
+        max-width: 1350px;
+    }
 }
 
 .modal {
@@ -690,6 +696,15 @@ body {
     font-size: 2rem;
     top: 1rem;
     right: 1rem;
+}
+
+.bx-cloud-download {
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    top: 1rem;
+    left: 1rem;
 }
 
 .left-arrow {

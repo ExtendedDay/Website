@@ -39,22 +39,22 @@
         <div class="place-center">
             <div class="gallery-container">
                 <div class="masonry-gallery">
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164344366.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164348693.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164350716.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164400768.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164402985.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164436776.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164437880.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164450399.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164452681.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171825580.RAW-01.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171829302.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171830529.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171831599.RAW-01.MP.COVER.jpg" />
-                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171840831.RAW-01.COVER.jpg" />
                     <div class="grid-sizer">
                     </div>
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164344366.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164348693.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164350716.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164400768.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164402985.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164436776.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164437880.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164450399.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_164452681.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171825580.RAW-01.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171829302.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171830529.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171831599.RAW-01.MP.COVER.webp" />
+                    <img alt="" class="gallery-item" src="Images/processed/PXL_20240605_171840831.RAW-01.COVER.webp" />
                 </div>
             </div>
         </div>
@@ -62,8 +62,9 @@
             <div class="bx bx-left-arrow left-arrow">
             </div>
             <div class="modal-content">
-                <div class="bx bx-x-circle close">
+                <div class="bx bx-x-circle">
                 </div>
+                <div class='bx bx-cloud-download'></div>
                 <img alt="Modal Image" id="modal-image" />
             </div>
             <div class="bx bx-right-arrow right-arrow">
@@ -184,17 +185,22 @@
                 var modal = $('#myModal');
                 var modalImg = $('#modal-image');
                 var images = $('.gallery-item');
-                var currentIndex = $(this).index();
+                var downloadButton = $('.bx-cloud-download');
+                var currentIndex = $(this).index('.gallery-item');
+                var modalImgSrcName = $(this).attr('src').split('/').pop().split('.').slice(0, -1).join('.');
 
-                // Set the current image in the modal
-                modalImg.attr('src', $(this).attr('src'));
+                // Set the initial modal image source to the large version
+                modalImg.attr('src', 'Images/processed/' + modalImgSrcName + '_large.webp');
+
+                // Update the download button's data-download attribute to point to the original image
+                downloadButton.attr('data-download', 'Images/' + modalImgSrcName + '.jpg');
 
                 // Show modal
                 modal.css('display', 'grid');
 
                 // Close modal when clicked outside the image
                 $(document).mouseup(function (e) {
-                    if (!modalImg.is(e.target) && !$('.left-arrow').is(e.target) && !$('.right-arrow').is(e.target) && modalImg.has(e.target).length === 0) {
+                    if (!modalImg.is(e.target) && !$('.left-arrow').is(e.target) && !$('.right-arrow').is(e.target) && !downloadButton.is(e.target) && modalImg.has(e.target).length === 0) {
                         modal.css('display', 'none');
                     }
                 });
@@ -204,7 +210,7 @@
                     modal.css('display', 'none');
                 });
 
-                // Scroll through images with left and right arrows, or with the on screen "left-arrow" and "right-arrow" icons
+                // Scroll through images with left and right arrows, or with the on-screen "left-arrow" and "right-arrow" icons
                 $(document).keydown(function (e) {
                     if (e.keyCode == 37) { // Left arrow
                         scrollLeft();
@@ -218,14 +224,19 @@
 
                 function scrollLeft() {
                     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-                    modalImg.attr('src', $(images[currentIndex]).attr('src'));
+                    updateModalImage();
                 }
 
                 function scrollRight() {
                     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-                    modalImg.attr('src', $(images[currentIndex]).attr('src'));
+                    updateModalImage();
                 }
 
+                function updateModalImage() {
+                    var newImgSrcName = $(images[currentIndex]).attr('src').split('/').pop().split('.').slice(0, -1).join('.');
+                    modalImg.attr('src', 'Images/processed/' + newImgSrcName + '_large.webp');
+                    downloadButton.attr('data-download', 'Images/' + newImgSrcName + '.jpg');
+                }
             });
 
             // Close modal when escape key is pressed
@@ -234,7 +245,19 @@
                     $('#myModal').css('display', 'none');
                 }
             });
+
+            // Download image when download button is clicked
+            $(document).on('click', '.bx-cloud-download', function () {
+                var downloadLink = document.createElement('a');
+                downloadLink.href = $(this).attr('data-download');
+                downloadLink.download = downloadLink.href.split('/').pop();
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            });
         });
+
     </script>
+
 </body>
 </html>
