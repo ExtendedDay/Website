@@ -576,6 +576,10 @@ body {
 }
 
 /* Gallery Page */
+body:has(.gallery-header) {
+    overflow-x: hidden;
+}
+
 .gallery-header {
     position: relative;
     width: 100vw;
