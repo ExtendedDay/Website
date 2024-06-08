@@ -25,7 +25,7 @@ def update_and_beautify_gallery_html():
 
         # Generate img tags for each image and append to the masonry-gallery div
         for image_file in image_files:
-            img_tag = '<img alt="" src="Images/processed/' + image_file + '" class="gallery-item">'
+            img_tag = '<img alt="" loading="lazy" src="Images/processed/' + image_file + '" class="gallery-item">'
             masonry_div.append(BeautifulSoup(img_tag, 'html.parser'))
         
         # Move the file pointer to the beginning of the file before writing
