@@ -18,6 +18,7 @@
     <link href="../favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
+    <!-- ========= Website Coded and Designed by Clonephaze/Jack Smith  =========  -->
     <header class="gallery-header">
         <img alt="" role="presentation" src="TreeBranchGallery.webp" />
         <h1 class="hidden-title">
@@ -59,16 +60,20 @@
             </div>
         </div>
         <div class="modal" id="myModal">
-            <div aria-label="Go to previous image" class="bx bx-left-arrow left-arrow" role="button" tabindex="1">
+            <div aria-label="Go to previous image" class="left-arrow" role="button" tabindex="1">
+                <i class='bx bx-left-arrow'></i>
             </div>
             <div class="modal-content">
-                <div aria-label="Close" class="bx bx-x-circle" role="button" tabindex="1">
+                <div aria-label="Close" class="close-button" role="button" tabindex="1">
+                    <i class='bx bx-x-circle'></i>
                 </div>
-                <div aria-label="Download" class="bx bx-cloud-download" role="button" tabindex="1">
+                <div aria-label="Download" class="download-button" role="button" tabindex="1">
+                    <i class='bx bx-cloud-download'></i>
                 </div>
                 <img alt="" id="modal-image" />
             </div>
-            <div aria-label="Go to next image" class="bx bx-right-arrow right-arrow" role="button" tabindex="1">
+            <div aria-label="Go to next image" class="right-arrow" role="button" tabindex="1">
+                <i class='bx bx-right-arrow'></i>
             </div>
         </div>
     </main>
@@ -186,7 +191,10 @@
                 var modal = $('#myModal');
                 var modalImg = $('#modal-image');
                 var images = $('.gallery-item');
+                var leftArrow = $('.bx-left-arrow');
+                var rightArrow = $('.bx-right-arrow');
                 var downloadButton = $('.bx-cloud-download');
+                var closeButton = $('.close-button');
                 var currentIndex = $(this).index('.gallery-item');
                 var modalImgSrcName = $(this).attr('src').split('/').pop().split('.').slice(0, -1).join('.');
 
@@ -201,13 +209,13 @@
 
                 // Close modal when clicked outside the image
                 $(document).mouseup(function (e) {
-                    if (!modalImg.is(e.target) && !$('.left-arrow').is(e.target) && !$('.right-arrow').is(e.target) && !downloadButton.is(e.target) && modalImg.has(e.target).length === 0) {
+                    if (!modalImg.is(e.target) && !leftArrow.is(e.target) && !rightArrow.is(e.target) && !downloadButton.is(e.target) && modalImg.has(e.target).length === 0) {
                         modal.css('display', 'none');
                     }
                 });
 
                 // Close modal when close button is clicked
-                $('.close').click(function () {
+                closeButton.click(function () {
                     modal.css('display', 'none');
                 });
 
@@ -220,8 +228,8 @@
                     }
                 });
 
-                $('.left-arrow').click(scrollLeft);
-                $('.right-arrow').click(scrollRight);
+                leftArrow.click(scrollLeft);
+                rightArrow.click(scrollRight);
 
                 function scrollLeft() {
                     currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
@@ -247,13 +255,18 @@
                 }
             });
 
-            // Download image when download button is clicked
+            // Add click event listener to the download button
             $(document).on('click', '.bx-cloud-download', function () {
+                // Creates a new link element with the href attribute set to the 'data-download' attribute of the clicked element
                 var downloadLink = document.createElement('a');
                 downloadLink.href = $(this).attr('data-download');
+                // This sets the name of the file that will be downloaded
                 downloadLink.download = downloadLink.href.split('/').pop();
+                // Append the link element to the body
                 document.body.appendChild(downloadLink);
+                // Click the link element 
                 downloadLink.click();
+                // Remove the link element
                 document.body.removeChild(downloadLink);
             });
         });
