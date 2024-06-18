@@ -892,7 +892,7 @@ body:has(.gallery-header) {
         text-shadow: 1px 2px 0 hsla(13, 18%, 48%, 0.75) !important;
     }
 
-    .event-date-container {}
+    /* .event-date-container {} */
 
     .navigation {
 
